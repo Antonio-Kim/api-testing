@@ -1,0 +1,15 @@
+name: Testing env file
+on: [push]
+jobs:
+  Test-Env:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Create .env file
+        run: |
+          echo ${{ secret.ENV_FILE }} > .env
+      - name: install dependencies
+        run: npm install
+      - name: Run app using .env
+        run: node app.js
