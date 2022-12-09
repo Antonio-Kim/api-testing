@@ -8,7 +8,7 @@ jobs:
       - uses: actions/setup-node@v3
       - name: Create .env file
         run: |
-          echo ${{ secret.ENV_FILE }} > .env
+          echo ${{ secrets.ENV_FILE }} > .env
       - name: install dependencies
         run: npm install
       - name: Run app using .env

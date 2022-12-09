@@ -1,3 +1,3 @@
 require("dotenv").config();
 
-console.log(`${process.env.greeting} ${process.env.locations}`);
+console.log(`${process.env.greetings} ${process.env.locations}`);
